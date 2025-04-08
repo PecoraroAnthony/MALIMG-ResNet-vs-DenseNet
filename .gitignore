@@ -1,0 +1,54 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Malware Dataset
+malimg_paper_dataset_imgs
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+
+# PyTorch / TensorBoard specific
+runs/              # TensorBoard logs
+*.pt               # PyTorch model weights
+*.pth              # PyTorch model files
+*.ckpt             # Checkpoints
+*.log              # Log files
+
+# Dataset files (optional, like MNIST)
+data/
+*.tar.gz
+*.zip
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# VSCode settings (optional)
+.vscode/
+
+# Python environment files
+*.egg-info/
+*.egg
+*.pkl
+*.npy
+*.npz
+
+# Testing
+htmlcov/
+coverage.xml
+*.cover
+.cache/
+pytest_cache/
+
+# Build files
+build/
+dist/
+*.spec
