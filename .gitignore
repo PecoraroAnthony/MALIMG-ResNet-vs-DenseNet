@@ -4,7 +4,8 @@ __pycache__/
 *.so
 
 # Malware Dataset
-malimg_paper_dataset_imgs
+malimg_dataset/
+malimg_raw/
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
