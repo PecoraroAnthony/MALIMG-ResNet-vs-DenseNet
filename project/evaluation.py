@@ -1,3 +1,6 @@
+# ------------------------------
+# evaluation.py (evaluates the model and produces a classification report and confusion matrix)
+# ------------------------------
 from sklearn.metrics import classification_report, confusion_matrix
 import matplotlib.pyplot as plt
 import seaborn as sns

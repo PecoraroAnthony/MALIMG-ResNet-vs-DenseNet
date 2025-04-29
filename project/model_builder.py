@@ -6,6 +6,7 @@ from tensorflow.keras.applications.resnet import preprocess_input as resnet_prep
 from tensorflow.keras.applications.densenet import preprocess_input as densenet_preprocess
 from tensorflow.keras import layers, models
 
+# This function builds a model based on the specified architecture and returns it along with the appropriate preprocessing function
 def get_model(model_name, input_shape=(64, 64, 3), num_classes=25, pretrained=False):
     weights = 'imagenet' if pretrained else None
 

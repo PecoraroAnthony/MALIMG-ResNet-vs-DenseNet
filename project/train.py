@@ -2,7 +2,9 @@
 # train.py (main script)
 # ------------------------------
 import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # 0 = all logs, 1 = filter INFO, 2 = filter WARNING, 3 = only ERROR
+# Limit TensorFlow logging to only show errors
+# 0 = all logs, 1 = filter INFO, 2 = filter WARNING, 3 = only ERROR
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  
 
 import tensorflow as tf
 from model_builder import get_model
@@ -11,37 +13,36 @@ from evaluation import evaluate_model
 from callbacks import get_callbacks
 from tensorflow.keras import mixed_precision
 
-# Enable GPU memory growth
+# Optimizes GPU memory usage (default behavior is to allocate all memory)
 gpus = tf.config.list_physical_devices('GPU')
 if gpus:
     try:
         for gpu in gpus:
             tf.config.experimental.set_memory_growth(gpu, True)
-        print(f"✅ Memory growth enabled for {len(gpus)} GPU(s)")
+        print(f"---Memory growth enabled for {len(gpus)} GPU(s)---")
     except RuntimeError as e:
-        print(f"❌ Memory growth failed: {e}")
+        print(f"Could not set memory growth: {e}")
 
-# Mixed Precision Optimization
-mixed_precision.set_global_policy('mixed_float16')
-
-# Model names to train
+# Define models (comment out the ones you don't want to train)
 model_names = [
-  'resnet50',
-  'resnet101',
-  'resnet152',
-  'densenet121',
-  'densenet169',
+  # 'resnet50',
+  # 'resnet101',
+  # 'resnet152',
+  # 'densenet121',
+  # 'densenet169',
   'densenet201'
 ]
 
 # Loop over each model
 for model_name in model_names:
-  print(f"\n\n✨ Starting training for {model_name}...\n\n")
+  print(f"\n\nStarting training for {model_name}...\n")
 
   # Build the model
   model, preprocess = get_model(model_name, pretrained=False)
 
-  # Load the data generators
+  print(f"{model_name} loaded successfully.\n")
+
+  # Load the data generators 
   train_gen, val_gen, test_gen = get_data_generators(
       '../malimg_dataset/train',
       '../malimg_dataset/val',
@@ -51,9 +52,9 @@ for model_name in model_names:
 
   # Compile the model
   model.compile(
-      optimizer='adam',
-      loss='categorical_crossentropy',
-      metrics=['accuracy']
+      optimizer='adam', # Adam optimizer
+      loss='categorical_crossentropy', 
+      metrics=['accuracy'] 
   )
 
   # Train the model
@@ -72,4 +73,4 @@ for model_name in model_names:
       model_name=model_name
   )
 
-  print(f"\n\n✨ Finished training and evaluation for {model_name}!\n\n")
+  print(f"\n\nFinished training and evaluation for {model_name}!\n\n")
