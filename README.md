@@ -77,3 +77,41 @@ Vendor ID:                GenuineIntel
 - pillow
 - tensorflow
 - scikit learn
+
+## Set Up Environment (Using environment.yml)
+
+```bash
+conda env create -f environment.yml
+```
+
+## Set Up The Environment (Manually)
+
+### Conda Environment Creation
+
+```bash
+conda create -n project-env python=3.10
+conda activate project-env
+```
+
+### Install Tensorflow for GPUs
+
+```bash
+pip install tensorflow[and-cuda]
+```
+
+### Install General Dependencies 
+
+```bash
+conda install numpy pandas matplotlib scikit-learn seaborn scipy
+pip install psutil gputil
+```
+
+### (Optional) Install Jupyter Notebook
+
+- Will possibly deprecate this step due to Jupyter compatability issues with the GPU
+
+### Run the Training Script (/project/train.py)
+
+```bash
+python train.py
+```
