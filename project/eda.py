@@ -25,9 +25,8 @@ def plots(ims, labels, class_indices, cols=10, interp=False):
     rows = (num_images + cols - 1) // cols
 
     # Set high-res figure size (scale up for better visualization)
-    scale_factor = 2.0  # Increase scale for better quality (64px × 2 = ~128px)
-    fig_w = cols * scale_factor
-    fig_h = rows * scale_factor
+    fig_w = cols 
+    fig_h = rows 
 
     plt.figure(figsize=(fig_w, fig_h))
 
