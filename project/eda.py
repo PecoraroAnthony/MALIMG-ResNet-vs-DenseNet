@@ -39,7 +39,7 @@ def plots(ims, labels, class_indices, cols=10, interp=False):
 
     plt.tight_layout()
     os.makedirs("eda", exist_ok=True)
-    plt.savefig("eda/sample_images.png", bbox_inches='tight')
+    plt.savefig("eda/sample_images.png", bbox_inches='tight', dpi=300)
     plt.close()
 
 def plot_class_distribution(labels, class_indices):
