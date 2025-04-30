@@ -1,0 +1,31 @@
+                precision    recall  f1-score   support
+
+     Adialer.C       1.00      1.00      1.00        19
+     Agent.FYI       0.95      1.00      0.97        18
+     Allaple.A       0.99      1.00      1.00       443
+     Allaple.L       1.00      0.99      1.00       239
+ Alueron.gen!J       1.00      1.00      1.00        30
+     Autorun.K       1.00      1.00      1.00        16
+       C2LOP.P       0.91      0.45      0.61        22
+   C2LOP.gen!g       0.81      0.83      0.82        30
+Dialplatform.B       1.00      1.00      1.00        27
+     Dontovo.A       1.00      1.00      1.00        25
+      Fakerean       1.00      0.97      0.98        58
+ Instantaccess       1.00      1.00      1.00        65
+    Lolyda.AA1       1.00      1.00      1.00        32
+    Lolyda.AA2       1.00      1.00      1.00        28
+    Lolyda.AA3       1.00      1.00      1.00        19
+     Lolyda.AT       1.00      0.96      0.98        24
+   Malex.gen!J       0.95      1.00      0.98        21
+ Obfuscator.AD       1.00      1.00      1.00        22
+      Rbot!gen       1.00      1.00      1.00        24
+    Skintrim.N       1.00      1.00      1.00        12
+ Swizzor.gen!E       0.52      0.60      0.56        20
+ Swizzor.gen!I       0.48      0.65      0.55        20
+         VB.AT       1.00      1.00      1.00        62
+    Wintrim.BX       1.00      1.00      1.00        15
+       Yuner.A       1.00      1.00      1.00       120
+
+      accuracy                           0.97      1411
+     macro avg       0.94      0.94      0.94      1411
+  weighted avg       0.98      0.97      0.97      1411

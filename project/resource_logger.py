@@ -60,8 +60,12 @@ class ResourceLogger(Callback):
             writer = csv.writer(file)
             writer.writerow([epoch + 1, gpu_memory, cpu_ram_used, cpu_ram_total, epoch_time])
 
-        # Also print live info
-        print(f"[Epoch {epoch+1}] GPU: {gpu_memory}MB | CPU RAM: {cpu_ram_used:.2f}MB / {cpu_ram_total:.2f}MB | Epoch Time: {epoch_time:.2f} sec")
+        # Clean output formatting after Keras progress bar
+        print("\n")
+        print(f"[Epoch {epoch+1}] Resource Usage:")
+        print(f"  GPU: {gpu_memory}MB")
+        print(f"  CPU RAM: {cpu_ram_used:.2f}MB / {cpu_ram_total:.2f}MB")
+        print(f"  Epoch Time: {epoch_time:.2f} sec\n")
 
     def on_train_end(self, logs=None):
         avg_epoch_time = sum(self.epoch_times) / len(self.epoch_times)
