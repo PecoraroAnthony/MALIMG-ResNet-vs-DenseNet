@@ -107,7 +107,7 @@ for model_name, history in model_histories.items():
 plt.title('Validation Loss Over Epochs')
 plt.xlabel('Epoch')
 plt.ylabel('Validation Loss')
-plt.ylim(0, 1.0)
+plt.ylim(0, 3.0)
 plt.legend()
 plt.grid()
 plt.tight_layout()
