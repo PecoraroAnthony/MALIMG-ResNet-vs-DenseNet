@@ -32,11 +32,12 @@ class ResourceLogger(Callback):
         self.total_time += epoch_time
         self.epoch_times.append(epoch_time)
 
-        pid = os.getpid()
+        pid = os.getpid() # get user process id
         gpu_memory = 0
 
         # GPU Usage
         try:
+            # Capture the output of nvidia-smi by querying using pid
             result = subprocess.run(
                 ['nvidia-smi', '--query-compute-apps=pid,used_memory', '--format=csv,noheader,nounits'],
                 capture_output=True, text=True, check=True

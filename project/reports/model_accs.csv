@@ -1,0 +1,7 @@
+Model, Total Accuracy(%)
+ResNet50, 98
+ResNet101, 97
+ResNet152, 96
+DenseNet121, 98
+DenseNet169, 97
+DenseNet201, 99

@@ -29,7 +29,7 @@ def evaluate_model(model, test_gen, class_names, model_name):
     # Plot confusion matrix
     cm = confusion_matrix(y_true, y_pred_labels)
     plt.figure(figsize=(10, 8))
-    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=class_names, yticklabels=class_names)
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=class_names, yticklabels=class_names) # seaborn for heatmap
     plt.title(f"Confusion Matrix - {model_name}")
     plt.xlabel("Predicted")
     plt.ylabel("True")
