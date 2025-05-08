@@ -1,5 +1,5 @@
 # ------------------------------
-# model_builder.py
+# model_builder.py (loads and builds models from Keras applications)
 # ------------------------------
 from tensorflow.keras.applications import ResNet50, ResNet101, ResNet152, DenseNet121, DenseNet169, DenseNet201
 from tensorflow.keras.applications.resnet import preprocess_input as resnet_preprocess

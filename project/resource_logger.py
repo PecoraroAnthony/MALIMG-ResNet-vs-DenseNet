@@ -1,7 +1,6 @@
 # ------------------------------
-# resource_logger.py
+# resource_logger.py (generates CSV logs for resource usage during training)
 # ------------------------------
-
 from tensorflow.keras.callbacks import Callback
 import psutil
 import os

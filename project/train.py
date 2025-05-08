@@ -1,5 +1,5 @@
 # ------------------------------
-# train.py (main script)
+# train.py (main script to train and evaluate models and generates validation accuracy and loss plots post-training)
 # ------------------------------
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # 0 = all logs, 1 = filter INFO, 2 = filter WARNING, 3 = only ERROR

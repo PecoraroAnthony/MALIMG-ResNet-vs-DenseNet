@@ -1,3 +1,6 @@
+# ------------------------------
+# plot_logs.py (plots graphs for resource usage and training time for each model using /logs)
+# ------------------------------
 import os
 import pandas as pd
 import matplotlib.pyplot as plt

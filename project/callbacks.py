@@ -1,5 +1,5 @@
 # ------------------------------
-# callbacks.py
+# callbacks.py (defines callbacks for training)
 # ------------------------------
 from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau, ModelCheckpoint
 from resource_logger import ResourceLogger

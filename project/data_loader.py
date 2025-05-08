@@ -1,5 +1,5 @@
 # ------------------------------
-# data_loader.py
+# data_loader.py (Loads and preprocesses the dataset)
 # ------------------------------
 import tensorflow as tf
 
